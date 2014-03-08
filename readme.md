@@ -1,5 +1,6 @@
 # TodayTodo App
 
+_development in pause, but you're free to pull/fork_
 
 __TodayTodo__ is a getting things done module for [Tomatoes Together][tomatoestogether].
 
