@@ -10,7 +10,16 @@ module.exports = (grunt) ->
           src : "**/*.coffee"
           ext : ".js"
         ]
-      
+      express :
+        options :
+          bare : true
+        files : [
+          expand : true
+          dest : "controllers/js"
+          cwd : "controllers/cs"
+          src : "**/*.coffee"
+          ext : ".js"
+        ]
 
     requirejs :
       build :
@@ -20,13 +29,6 @@ module.exports = (grunt) ->
           out : "public/javascript/app/build.js"
           optimize : "none"
 
-    jade :
-      dev :
-        options :
-          pretty : no
-        files :
-          "views/index.jade" : "src/jade/_layout.jade"
-    
     uglify :
       options : 
         report : "min"
@@ -43,19 +45,19 @@ module.exports = (grunt) ->
     clean :
       dev : 
         src : [
-          "public/javascript", "public/stylesheets", "views"
+          "public/javascript", "public/stylesheets",
+          "controllers/js"
         ]
 
     grunt.loadNpmTasks "grunt-contrib-coffee"
     grunt.loadNpmTasks "grunt-contrib-requirejs"
-    grunt.loadNpmTasks "grunt-contrib-jade"
     grunt.loadNpmTasks "grunt-contrib-uglify"
     grunt.loadNpmTasks "grunt-contrib-clean"
 
     grunt.registerTask "default", [
-      "coffee"
+      "coffee:dev"
+      "coffee:express"
       "requirejs"
-      "jade"
     ]
     grunt.registerTask "vendor", [ "uglify" ]
     grunt.registerTask "reset", [ "clean" ]

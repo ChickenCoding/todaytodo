@@ -12,7 +12,14 @@ You need [NodeJS][nodejs] to install it.
 
   + ``grunt`` to compile
 
+
 ## Structure
+
+### URL
+
+GET "/" : homepage, nothing to see .
+
+GET "/layout" : frontend view, works with localStorage.
 
 ### Verbose description
 
