@@ -2,4 +2,4 @@
 # GET Home Page
 ###
 exports.index = (req, res) ->
-  res.render("index.jade", pageTitle : "homepage")
+  res.render("pages/index.jade", pageTitle : "homepage")

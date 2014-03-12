@@ -1,13 +1,6 @@
-doctype html
-html(lang="en")
-  head
-    title= pageTitle
+include _templates/currentUser
+include _templates/taskList
+include _templates/group
 
-  body
-    div#page
-      include _partials/header
-      include _templates/currentUser
-      include _templates/taskList
-      include _templates/group
-    script(src="/javascript/vendor/require.js", type="text/javascript", data-main="/javascript/app/main.js")
-
+link(rel="stylesheet", href="/stylesheets/main.min.css")
+script(src="/javascript/vendor/require.js", type="text/javascript", data-main="/javascript/app/main.js")

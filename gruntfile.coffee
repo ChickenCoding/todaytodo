@@ -42,6 +42,13 @@ module.exports = (grunt) ->
           ext : ".js"
         ]
 
+    sass : 
+      dev :
+        files : [
+          "public/stylesheets/main.min.css" : "src/sass/**/*.sass"
+        ]
+
+
     clean :
       dev : 
         src : [
@@ -53,8 +60,10 @@ module.exports = (grunt) ->
     grunt.loadNpmTasks "grunt-contrib-requirejs"
     grunt.loadNpmTasks "grunt-contrib-uglify"
     grunt.loadNpmTasks "grunt-contrib-clean"
+    grunt.loadNpmTasks "grunt-contrib-sass"
 
     grunt.registerTask "default", [
+      "sass"
       "coffee:dev"
       "coffee:express"
       "requirejs"

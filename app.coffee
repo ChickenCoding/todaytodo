@@ -18,12 +18,8 @@ mongoose.connect "mongodb://localhost/test"
 
 app.use(express.static(__dirname + "/public"))
 
-# temp
-app.get "/layout", (req, res) ->
-  res.render("_layout.jade")
-# end of temp
-
 app.get "/", controllers.index
+app.get "/tasks", tasks.list
 
 server = http.createServer app
 server.listen app.get("port")

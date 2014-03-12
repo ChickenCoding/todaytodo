@@ -3,7 +3,7 @@
  * GET Home Page
  */
 exports.index = function(req, res) {
-  return res.render("index.jade", {
+  return res.render("pages/index.jade", {
     pageTitle: "homepage"
   });
 };
