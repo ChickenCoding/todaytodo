@@ -3,5 +3,7 @@
  * GET Tasks Page
  */
 exports.list = function(req, res) {
-  return res.render("pages/tasks.jade");
+  return res.render("pages/tasks.jade", {
+    pageTitle: "activity inventory"
+  });
 };

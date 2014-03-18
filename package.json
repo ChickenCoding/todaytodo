@@ -1,8 +1,8 @@
 {
   "name": "todaytodo",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "task list manager built for tomatoestogether.com",
-  "main": "src/test/",
+  "main": "app.coffee",
   "dependencies": {
     "grunt": "~0.4.2"
   },
@@ -19,11 +19,11 @@
     "jade": "~1.3.0"
   },
   "scripts": {
-    "test": "mocha testRunner.html"
+    "test" : "grunt --verbose"
   },
   "repository": {
     "type": "git",
-    "url": "tba"
+    "url": "http://github.com/ChickenCoding/todaytodo"
   },
   "author": "ChickenCoding",
   "license": "GPLv3"

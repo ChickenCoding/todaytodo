@@ -8,8 +8,6 @@ define [
     p.id = 0
     p.number = number
     p.taskId = idTask
-    hello = ->
-      console.log "world"
     window.pomodoro = p
     null
 )

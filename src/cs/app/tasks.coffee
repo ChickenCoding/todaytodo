@@ -24,12 +24,28 @@ define [
     tl.id = 0
     tl.name = "my tasklist"
     tl.totalTaskers = 0
-    tl.tId = 0
+    tl.tId = 1
+    t = task
     tl.list = ko.observableArray([
       new task(tl.tId, "mytask", 3)
     ,
       new task(tl.tId + 1, "mytask2", 4)
     ])
+    tl.tId = 2
+
+    tl.addTask = ->
+      tl.tId += 1
+      tl.list()
+        .push(
+          new t(
+            tl.tId,
+            $("input[name=new-task-name]").val(),
+            $("input[name=new-task-pomodoro]").val()
+          )
+        )
+      t = t
+      for task in tl.list()
+        console.log task
 
     tl.totalPomodoros = ko.computed 
       read: ->
@@ -59,8 +75,8 @@ define [
             totalTaskers +=1
         return totalTaskers
       owner : tl
-    
-    
+
+
     window.taskList = tl
     null
 )

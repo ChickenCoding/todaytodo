@@ -1,5 +1,5 @@
-div#current-user
-  span Welcome, 
+div#current-user(data-bind="page:{id:'currentUser'}")
+  span Welcome,
   input(type="text", data-bind="value: name, event{change: onChangeName}")
   div
     div(data-bind="text: createdAt")

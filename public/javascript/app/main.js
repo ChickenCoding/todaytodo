@@ -22,7 +22,7 @@
         exports: "Store"
       }
     }
-  }, require(["jquery", "knockout", "tasks", "members", "userPanel"], (function($, ko, taskList, memberList, currentUser) {
+  }, require(["jquery", "knockout", "tasks", "members", "userPanel", "store"], (function($, ko, taskList, memberList, currentUser, Store) {
     return $(function() {
       ko.applyBindings(new taskList(), document.getElementById("tasks"));
       ko.applyBindings(new memberList(), document.getElementById("group"));

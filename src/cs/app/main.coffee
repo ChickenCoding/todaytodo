@@ -15,7 +15,7 @@ require.config
       exports : "Moment"
     store :
       exports : "Store"
-  require ["jquery", "knockout", "tasks", "members", "userPanel"], ( ($, ko, taskList, memberList, currentUser) ->
+  require ["jquery", "knockout", "tasks", "members", "userPanel", "store"], ( ($, ko, taskList, memberList, currentUser, Store) ->
     $ ->
       ko.applyBindings new taskList(), document.getElementById("tasks")
       ko.applyBindings new memberList(), document.getElementById("group")

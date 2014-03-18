@@ -17,13 +17,28 @@
       return null;
     };
     return taskList = function() {
-      var tl;
+      var t, tl;
       tl = this;
       tl.id = 0;
       tl.name = "my tasklist";
       tl.totalTaskers = 0;
-      tl.tId = 0;
+      tl.tId = 1;
+      t = task;
       tl.list = ko.observableArray([new task(tl.tId, "mytask", 3), new task(tl.tId + 1, "mytask2", 4)]);
+      tl.tId = 2;
+      tl.addTask = function() {
+        var _i, _len, _ref, _results;
+        tl.tId += 1;
+        tl.list().push(new t(tl.tId, $("input[name=new-task-name]").val(), $("input[name=new-task-pomodoro]").val()));
+        t = t;
+        _ref = tl.list();
+        _results = [];
+        for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+          task = _ref[_i];
+          _results.push(console.log(task));
+        }
+        return _results;
+      };
       tl.totalPomodoros = ko.computed({
         read: function() {
           var totalPomodoros, _i, _len, _ref;

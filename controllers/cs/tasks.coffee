@@ -3,4 +3,5 @@
 ###
 
 exports.list = (req, res) ->
-  res.render("pages/tasks.jade")
+  res.render("pages/tasks.jade", pageTitle : "activity inventory")
+

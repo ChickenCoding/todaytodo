@@ -3,6 +3,11 @@
     var currentUser;
     return currentUser = function() {
       var cU;
+      if (!Store.get("user")) {
+        Store.set("user", {
+          name: "guest"
+        });
+      }
       cU = this;
       cU.name = ko.observable(Store.get("user").name || name);
       cU.createdAt = Moment().format("MM DD YYYY hh:mm:ss");
