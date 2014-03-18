@@ -1,5 +1,10 @@
 # TodayTodo App
 
+[![Build Status](https://travis-ci.org/ChickenCoding/todaytodo.png?branch=master)](https://travis-ci.org/ChickenCoding/todaytodo)
+<img src="https://david-dm.org/ChickenCoding/todaytodo.png" alt="Dependency status" /> 
+ <img src="https://david-dm.org/ChickenCoding/todaytodo/dev-status.png" alt="Dependency status" /> 
+
+
 _development in pause, but you're free to pull/fork_
 
 __TodayTodo__ is a getting things done module for [Tomatoes Together][tomatoestogether].
