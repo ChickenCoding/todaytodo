@@ -22,6 +22,7 @@ GET "/" : homepage, nothing to see .
 GET "/layout" : frontend view, works with localStorage.
 
 ### Verbose description
+  + ``/src/cs/projects.coffee`` _not yet implemented_
 
   + ``/src/cs/tasks.coffee``
 

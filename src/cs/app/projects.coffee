@@ -18,4 +18,7 @@ define [
       pjc.updatedAt(Moment().format("MM-DD-YYYY hh:mm:ss"))
     window.project = pjc
     null
+  projects = ->
+    window.projects = pjcs
+    null
 )
