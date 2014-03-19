@@ -5,6 +5,7 @@
  <img src="https://david-dm.org/ChickenCoding/todaytodo/dev-status.png" alt="Dependency status" /> 
 
 
+
 _development in pause, but you're free to pull/fork_
 
 __TodayTodo__ is a getting things done module for [Tomatoes Together][tomatoestogether].
@@ -54,7 +55,12 @@ GET "/layout" : frontend view, works with localStorage.
     + a ``pomodoro`` is basically a tomato
 
     + each ``pomodoro`` have an assigned ``task``, linked by the task id
+    
+### What is pomodoro technique ? 
 
+[![pomodoro](http://pomodorotechnique.com/wp-content/themes/pomodoro/img/logos/logo.png)](http://pomodorotechnique.com/)
+
+### Licence 
 
 Copyright (C) 2014 ChickenCoding
 
